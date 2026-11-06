@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Trajetória e Criações de Aline Chiminácio da Silva: projeto em destaque executado, formação acadêmica, curso de astronomia na UTFPR, ilustração, design e esportes.">
+    <title>Trajetória e Criações | Aline Chiminácio da Silva</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor-personalizado" id="cursorPonto"></div>
+    <div class="cursor-rastro" id="cursorRastro"></div>
+    <div class="conteiner-rastro-bolhas" id="conteinerRastroBolhas"></div>
+    <div class="camada-flutuante">
+        <div class="forma-passeando forma-1"></div>
+        <div class="forma-passeando forma-2"></div>
+    </div>
+
+    <nav class="navegacao-fixa">
+        <div class="conteiner menu-conteudo">
+            <a href="index.html#inicio" class="logo-site">
+                <span class="logo-destaque">Aline</span> Chimi
+            </a>
+
+            <div class="links-navegacao" id="linksNavegacao">
+                <a href="index.html#inicio" class="link-menu">Início</a>
+                <a href="sobre.html" class="link-menu">Sobre mim</a>
+                <a href="trajetoria.html" class="link-menu ativo">Trajetória e Criações</a>
+                <a href="contato.html" class="link-menu">Contato</a>
+            </div>
+
+            <div class="controles-topo">
+
+                <button id="botaoMusica" class="botao-controle" type="button" aria-label="Tocar ou pausar música">
+                    <span id="textoMusica">▶─•</span>
+                </button>
+
+                <button id="botaoTema" class="botao-controle botao-tema" type="button"
+                    aria-label="Alternar modo claro e escuro">
+                    <span id="textoTema">🫧</span>
+                </button>
+
+                <button id="botaoMenuMobile" class="botao-controle botao-hamburguer" type="button"
+                    aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="linksNavegacao">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <audio id="audioFundo" preload="none">
+        <source src="Audio/Audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <main>
+
+        <header class="secao-inicio">
+            <div class="conteiner-bolhas">
+                <div class="bolha bolha-1"></div>
+                <div class="bolha bolha-2"></div>
+                <div class="bolha bolha-3"></div>
+                <div class="bolha bolha-4"></div>
+            </div>
+
+            <div class="conteiner">
+                <div class="painel-vidro painel-inicio">
+
+                    <div class="topo-painel-inicio">
+                        <div class="tag-sistema">
+                            <span class="ponto-status"></span>
+                            <span id="rotuloSistema">Sistema: Frutiger Aero // Dia Ativo</span>
+                        </div>
+
+                        <!-- Olhos interativos -->
+                        <div class="olhos-observadores" id="olhosObservadores" aria-hidden="true"
+                            title="Olhos observando seus movimentos">
+                            <div class="olho" id="olhoEsquerdo">
+                                <div class="esclera">
+                                    <div class="pupila">
+                                        <div class="brilho-pupila"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="olho" id="olhoDireito">
+                                <div class="esclera">
+                                    <div class="pupila">
+                                        <div class="brilho-pupila"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="migalha-pao">
+                        <a href="index.html#inicio"><i class="fa-solid fa-house"></i> Início</a>
+                        <span>/</span>
+                        <span>Trajetória e Criações</span>
+                    </div>
+
+                    <p class="subtitulo-apresentacao">Aline Chiminácio da Silva — Portfólio & Evolução</p>
+                    <h1 class="titulo-principal">
+                        Trajetória, Projetos Executados, Estudos e Criações Visuais.
+                    </h1>
+
+                    <p class="paragrafo-destaque">
+                        Aqui você encontra os detalhes do meu projeto prático já executado, minha trajetória de formação
+                        técnica e acadêmica, além da minha produção em design visual, ilustração, colagens e atividades
+                        esportivas.
+                    </p>
+
+                    <div class="grupo-botoes">
+                        <a href="#projeto-executado" class="botao-acao botao-primario">
+                            <i class="fa-solid fa-laptop-code"></i> Ver Projeto em Destaque
+                        </a>
+                        <a href="contato.html" class="botao-acao botao-secundario">
+                            <i class="fa-solid fa-paper-plane"></i> Entrar em Contato
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="projeto-executado" class="secao-trajetoria">
+            <div class="conteiner">
+                <div class="painel-vidro">
+
+                    <div class="cabecalho-secao">
+                        <span class="subtitulo-secao">Projeto Autoral Implementado</span>
+                        <h2 class="titulo-secao">Projeto em Destaque</h2>
+                    </div>
+
+                    <article class="cartao-projeto" style="margin-bottom: 24px;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
+                            <h3 class="titulo-cartao" style="font-size: 1.35rem; color: var(--cor-azul);">
+                                <i class="fa-solid fa-laptop-code"> Portfólio Web Interativo Frutiger Aero &
+                                    Weirdcore</i>
+                            </h3>
+                        </div>
+
+                        <p class="descricao-cartao descricao-projeto">
+                            Este é o meu projeto autoral!
+                            Ele mostra um pouco de quem eu sou como desenvolvedora.
+                            Utilizando HTML,CSS e JavaScript, com painéis de vidro
+                            translúcido e muito cuidado com os detalhes.
+                        </p>
+
+                        <h4 class="titulo-item titulo-funcionalidades">
+                            <i class="fa-solid fa-star"> O que já tem no projeto:</i>
+                        </h4>
+
+                        <div class="item-lista">
+                            <p class="descricao-cartao"><strong>Modo claro e escuro:</strong> o claro tem o
+                                visual Frutiger Aero, com céu, água e transparências. O escuro tem o visual
+                                Weirdcore, com um clima noturno e digital.</p>
+                        </div>
+
+                        <div class="item-lista">
+                            <p class="descricao-cartao"><strong>Olhos observadores:</strong> os olhos seguem o
+                                mouse pela tela e piscam sozinhos no modo escuro.</p>
+                        </div>
+
+                        <div class="item-lista">
+                            <p class="descricao-cartao"><strong>Rastro de bolhas:</strong> quando você mexe o
+                                mouse, aparecem bolhinhas de vários tamanhos seguindo o cursor.</p>
+                        </div>
+
+                        <div class="item-lista">
+                            <p class="descricao-cartao"><strong>Música e tema salvo:</strong> um botão para tocar
+                                a música, e o site lembra se você escolheu o modo claro ou escuro.</p>
+                        </div>
+
+                        <div class="lista-tags" style="margin-bottom: 20px;">
+                            <span class="tag-pill"><i class="fa-brands fa-html5"></i> HTML</span>
+                            <span class="tag-pill"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                            <span class="tag-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="tag-pill"><i class="fa-solid fa-mobile-screen"></i>Design Estético</span>
+                        </div>
+
+                        <div class="rodape-cartao">
+                            <a href="index.html#inicio" class="botao-acao botao-primario">
+                                <i class="fa-solid fa-eye"></i> Explorar Este Projeto na Página Inicial
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-trajetoria">
+            <div class="conteiner">
+                <div class="painel-vidro">
+
+                    <div class="cabecalho-secao">
+                        <h2 class="titulo-secao">🐠‧₊˚Formação e Cursos🌐₊𖥔</h2>
+                    </div>
+
+                    <div class="grade-cartoes">
+                        <article class="cartao-projeto">
+                            <div style="font-size: 1.8rem; color: var(--cor-ciano); margin-bottom: 12px;">
+                                <i class="fa-solid fa-satellite"></i>
+                            </div>
+                            <h3 class="titulo-cartao">Curso de Astronomia (UTFPR)</h3>
+                            <p class="descricao-cartao">
+                                Busca de despertar o interesse de meninas da Educação Básica pública
+                                pelas carreiras de ciências exatas, engenharias, computação e astronomia.
+                                Promovendo oficinas, palestras e ações de divulgação científica que valorizam
+                                a história e a contribuição das mulheres na ciência.
+                            </p>
+                            <div class="rodape-cartao">
+                                <span class="tag-pill"><i class="fa-solid fa-spinner"></i>Em Andamento</span>
+                            </div>
+                        </article>
+
+                        <article class="cartao-projeto">
+                            <div style="font-size: 1.8rem; color: var(--cor-verde-agua); margin-bottom: 12px;">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h3 class="titulo-cartao">Bootcamp4all 2 (Integrado)</h3>
+                            <p class="descricao-cartao">
+                                Treinamento presencial e prático!
+                                Estudo constante de HTML e CSS para desenvolvimento de layouts e sites, JavaScript para
+                                a
+                                construção de pequenas aplicações, e desenvolvimento com IA para acelerar
+                                projetos com técnicas inovadoras.
+                            </p>
+                            <div class="rodape-cartao">
+                                <span class="tag-pill"><i class="fa-solid fa-spinner"></i>Em Andamento</span>
+                            </div>
+                        </article>
+
+                        <article class="cartao-projeto">
+                            <div style="font-size: 1.8rem; color: var(--cor-azul); margin-bottom: 12px;">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <h3 class="titulo-cartao">BootCamp4Girls (Integrado)</h3>
+                            <p class="descricao-cartao">
+                                Programa de capacitação imersivo voltado ao fortalecimento e inserção de mulheres na
+                                tecnologia. Foco em lógica de programação, boas práticas, resolução de
+                                problemas e desenvolvimento colaborativo em equipe.
+                            </p>
+                            <div class="rodape-cartao">
+                                <span class="tag-pill"><i class="fa-solid fa-check"></i>Concluído</span>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-trajetoria">
+            <div class="conteiner">
+                <div class="painel-vidro">
+
+                    <div class="cabecalho-secao">
+                        <span class="subtitulo-secao">Arte, Expressão & Movimento</span>
+                        <h2 class="titulo-secao">Criação Visual, Design e Atividades</h2>
+                    </div>
+
+                    <div class="grade-dupla">
+
+                        <div class="bloco-trajetoria-item">
+                            <h3 class="titulo-item">🫧𓏲 ๋࣭Ilustração, Colagens & Canva˖✩🎐</h3>
+
+                            <div class="item-lista">
+                                <h4 class="titulo-cartao">Ilustração e Desenho</h4>
+                                <p class="descricao-cartao">
+                                    Desenvolvo ilustrações e desenhos autorais tanto no formato manual quanto digital.
+                                    Cada criação exercita minha sensibilidade para paletas de cores, harmonia de
+                                    proporções e detalhamento minucioso.
+                                </p>
+                            </div>
+
+                            <div class="item-lista">
+                                <h4 class="titulo-cartao">Colagens & Canva</h4>
+                                <p class="descricao-cartao">
+                                    Utilizo o Canva e softwares gráficos para criar colagens visuais conceituais,
+                                    composições nostálgicas e cartazes digitais inspirados na cultura visual da internet
+                                    dos anos 2000 (Frutiger Aero e Weirdcore).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bloco-trajetoria-item">
+                            <h3 class="titulo-item">🫧𓇼𓏲*Colagem✩‧₊🎐</h3>
+                            <div class="moldura-imagem">
+                                <img src="img/FrutigerAero copy.jpg" alt="Desenho">
+                            </div>
+                        </div>
+
+                        <div class="bloco-aprofundar">
+                            <div class="texto-aprofundar">
+                                <span>Gostou de conhecer minhas criações e trajetória? Vamos trabalhar juntos!</span>
+                            </div>
+                            <a href="contato.html" class="botao-acao botao-secundario">Ver Página de Contato</a>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape-site rodape">
+        <div class="conteiner rodape-conteudo">
+            <p class="texto-rodape">
+                Feito por ˚Aline⋆˚꩜｡ com HTML, CSS e JavaScript - Centro Universitário Integrado
+            </p>
+            <h6 class="texto-rodape" id="rodapeHora">
+                Feito com HTML, CSS e JavaScript
+            </h6>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

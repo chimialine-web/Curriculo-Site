@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfólio de Aline Chiminácio da Silva. Conheça minha trajetória, e se aprofunde em me conhecer caso se interesse.">
+  <title>Aline Chiminácio da Silva</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="cursor-personalizado" id="cursorPonto"></div>
+  <div class="cursor-rastro" id="cursorRastro"></div>
+  <div class="conteiner-rastro-bolhas" id="conteinerRastroBolhas"></div>
+  <div class="camada-flutuante">
+    <div class="forma-passeando forma-1"></div>
+    <div class="forma-passeando forma-2"></div>
+  </div>
+
+  <nav class="navegacao-fixa">
+    <div class="conteiner menu-conteudo">
+      <a href="#inicio" class="logo-site">
+        <span class="logo-destaque">Aline</span>Chimi
+      </a>
+
+      <div class="links-navegacao" id="linksNavegacao">
+        <a href="#inicio" class="link-menu">Início</a>
+        <a href="#sobre" class="link-menu">Sobre mim</a>
+        <a href="#trajetoria" class="link-menu">Trajetória e Criações</a>
+        <a href="#contato" class="link-menu">Contato</a>
+      </div>
+
+      <div class="controles-topo">
+
+        <button id="botaoMusica" class="botao-controle" type="button" aria-label="Tocar ou pausar música">
+          <span id="textoMusica">▶─•</span>
+        </button>
+
+        <button id="botaoTema" class="botao-controle botao-tema" type="button"
+          aria-label="Alternar modo claro e escuro">
+          <span id="textoTema">🫧</span>
+        </button>
+
+        <button id="botaoMenuMobile" class="botao-controle botao-hamburguer" type="button"
+          aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="linksNavegacao">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <audio id="audioFundo" preload="none">
+    <source src="Audio/Audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+
+
+    <header id="inicio" class="secao-inicio">
+
+      <div class="conteiner-bolhas">
+        <div class="bolha bolha-1"></div>
+        <div class="bolha bolha-2"></div>
+        <div class="bolha bolha-3"></div>
+        <div class="bolha bolha-4"></div>
+      </div>
+
+      <div class="conteiner">
+        <div class="painel-vidro painel-inicio">
+
+          <div class="topo-painel-inicio">
+            <div class="tag-sistema">
+              <span class="ponto-status"></span>
+              <span id="rotuloSistema">Sistema: Frutiger Aero // Dia Ativo</span>
+            </div>
+
+
+            <!-- Olhos interativos -->
+            <div class="olhos-observadores" id="olhosObservadores" aria-hidden="true"
+              title="Olhos observando seus movimentos">
+              <div class="olho" id="olhoEsquerdo">
+                <div class="esclera">
+                  <div class="pupila">
+                    <div class="brilho-pupila"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="olho" id="olhoDireito">
+                <div class="esclera">
+                  <div class="pupila">
+                    <div class="brilho-pupila"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="subtitulo-apresentacao">Aline Chiminácio da Silva</p>
+          <h1 class="titulo-principal">
+            Sinta-se avontade para dar uma olhada em meu curriculo!
+          </h1>
+
+          <div class="grade-apresentacao">
+            <div class="espaco-foto">
+              <div class="FotoIndex">
+                <img src="img/lili.jpeg" alt="Foto de perfil de Aline Chiminácio da Silva">
+              </div>
+            </div>
+
+            <div class="texto-apresentacao">
+              <p class="paragrafo-destaque">
+                Oioii me chamo Aline, e este é meu site/currículo criativo, onde me apresento e
+                você pode me contatar por meio de meus contatos caso tenha interesse em algo,
+                ou se quiser só conversar podemos também!!
+              </p>
+
+              <div class="grupo-botoes">
+                <a href="#trajetoria" class="botao-acao botao-primario">
+                  <i class="fa-solid fa-folder-open"></i> Ver Minhas Criações
+                </a>
+                <a href="#contato" class="botao-acao botao-secundario">
+                  <i class="fa-solid fa-paper-plane"></i> Entrar em Contato
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <section id="sobre" class="secao-sobre">
+      <div class="conteiner">
+        <div class="painel-vidro">
+
+          <div class="cabecalho-secao">
+            <span class="subtitulo-secao">Conheça meu perfil</span>
+            <h2 class="titulo-secao">Sobre mim</h2>
+          </div>
+          <div class="grade-sobre">
+            <div class="bloco-conteudo">
+              <h3 class="titulo-item"> Minha Trajetória & Interesse</h3>
+              <p class="texto-corrido">
+                Sou Aline Chiminácio da Silva, tenho 16 anos totalmente apaixonada pela área da programação, arte
+                e design interativo. Meu objetivo é criar experiências na web que não sejam apenas funcionais, mas
+                também encantadoras, acessíveis e com decorações únicas.
+              </p>
+              <p class="texto-corrido">
+                <strong>O que mais gosto:</strong>
+                Meu universo de interesses reúne a paixão pela astronomia,
+                a expressão artística através dos desenhos, a criação visual com colagens digitais no
+                Canva e estéticas digitais
+                retrô-futuristas como Frutiger Aero e Weirdcore.
+              </p>
+            </div>
+
+            <div class="bloco-conteudo">
+              <h3 class="titulo-item">Habilidades & Formação</h3>
+              <p class="texto-corrido">
+                Construo minhas competências combinando estudo contínuo e prática constante. Minha trajetória em
+                tecnologia e artes reúne formações exelentes e precisas:
+              </p>
+
+              <div class="lista-tags">
+                <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> BootCamp Full Stack (cursando)</span>
+                <span class="tag-pill"><i class="fa-solid fa-circle-check"></i> BootCamp4Girls (concluído)</span>
+                <span class="tag-pill"><i class="fa-solid fa-satellite"></i> Astronomia UTFPR (cursando)</span>
+                <span class="tag-pill"><i class="fa-solid fa-pen-nib"></i> Desenho & Ilustração</span>
+                <span class="tag-pill"><i class="fa-solid fa-shapes"></i> Canva & Colagens</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bloco-aprofundar">
+            <div class="texto-aprofundar">
+              <span>Quer se aprofundar na minha bio completa, formação e em tudo o que mais gosto?</span>
+            </div>
+            <a href="sobre.html" class="botao-acao botao-secundario">
+              <i class="fa-solid fa-arrow-right"></i> Clique aqui para ver mais!
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="trajetoria" class="secao-trajetoria">
+      <div class="conteiner">
+        <div class="painel-vidro">
+
+          <div class="cabecalho-secao">
+            <span class="subtitulo-secao">Projetos, estudos e vivências</span>
+            <h2 class="titulo-secao">Trajetória e Criações</h2>
+          </div>
+        </div>
+
+        <div class="subbloco-trajetoria">
+          <h3 class="titulo-subbloco">
+            <i class="fa-solid fa-laptop-code"></i> ─── ⋆⋅Projeto em Destaque⋅⋆ ──
+          </h3>
+
+          <div class="grade-cartoes">
+            <article class="cartao-projeto">
+              <h4 class="titulo-cartao">Portfólio Web Interativo Frutiger Aero & Weirdcore</h4>
+              <p class="descricao-cartao">
+                Este é o meu projeto autoral, que construi com muito carinho!
+                Estou usando HTML, CSS e JavaScript para criar um portfólio com a atmosfera
+                Frutiger Aero e Weirdcore, com alternância entre modo claro e escuro, cursor com
+                efeito de bolhas, painéis de vidro translúcido e controle de música.
+                Fique a vontade para explorar e analisar cada detalhe dele!
+              </p>
+              <div class="rodape-cartao">
+                <a href="#inicio" class="link-acao">
+                  Explorar Projeto no Topo <i class="fa-solid fa-arrow-up"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <h3 class="titulo-subbloco">
+            <i class="fa-solid fa-graduation-cap"></i> ─── ⋆⋅Formação, Cursos e Atividades⋅⋆ ──
+          </h3>
+
+          <div class="grade-dupla">
+
+            <div class="bloco-trajetoria-item">
+              <h3 class="titulo-item">
+                <i class="fa-solid fa-graduation-cap"></i> ⋆｡‧˚ʚ Formação e Cursos ɞ˚‧｡⋆
+              </h3>
+              <div class="item-lista">
+                <h4 class="titulo-cartao">⋆⭒˚🔭Curso de Astronomia (UTFPR)</h4>
+                <h5>˖🌐⊹Em Andamento...</h5>
+                <p class="descricao-cartao">Estudos sobre astros, cosmologia, métodos de investigação científica e
+                  pensamento analítico na Universidade Tecnológica Federal do Paraná.</p>
+              </div>
+              <div class="item-lista">
+                <h4 class="titulo-cartao">⋆⭒˚🖥️BootCamp4all 2</h4>
+                <h5>˖🌐⊹Em Andamento...</h5>
+                <p class="descricao-cartao">Cursando formação intensiva voltada para desenvolvimento web moderno, boas
+                  práticas de arquitetura e lógica de programação.</p>
+              </div>
+              <div class="item-lista">
+                <h4 class="titulo-cartao">⋆⭒˚🖥️BootCamp4Girls</h4>
+                <h5>🍀✔⊹Concluído.</h5>
+                <p class="descricao-cartao">Programa de capacitação em tecnologia já concluído com êxito, focado no
+                  protagonismo feminino e desenvolvimento web.</p>
+              </div>
+            </div>
+
+            <div class="bloco-trajetoria-item">
+              <h3 class="titulo-item">
+                <i class="fa-solid fa-palette"></i> ⋆.˚ Criação Visual, Design e Atividades ༘⋆
+              </h3>
+              <div class="item-lista">
+                <h4 class="titulo-cartao">⋆⭒˚🖌️Ilustração e Desenho</h4>
+                <p class="descricao-cartao">Desenho manual e digital, sensibilidade estética autoral e cuidado
+                  minucioso
+                  em cada traço e detalhe visual.</p>
+              </div>
+              <div class="item-lista">
+                <h4 class="titulo-cartao">⋆⭒˚🎨Colagens & Canva</h4>
+                <p class="descricao-cartao">Composição de cartazes, artes gráficas digitais e experimentações visuais
+                  explorando a atmosfera estética Frutiger Aero e anos 2000.</p>
+              </div>
+              <div class="item-lista">
+                <h4 class="titulo-cartao">⋆⭒˚🌿Esportes e Bem-estar</h4>
+                <p class="descricao-cartao">Prática regular de esportes para cultivar energia, disposição física,
+                  constância, foco e equilíbrio pessoal.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="bloco-aprofundar">
+            <div class="texto-aprofundar">
+              <span>Quer ver detalhes completos do meu projeto executado, cursos, criações visuais e esportes?</span>
+            </div>
+            <a href="trajetoria.html" class="botao-acao botao-secundario">
+              <i class="fa-solid fa-arrow-right"></i> Ver página: Trajetória e Criações
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao-contato">
+      <div class="conteiner">
+        <div class="painel-vidro">
+
+          <div class="cabecalho-secao">
+            <span class="subtitulo-secao">Vamos construir algo juntos?</span>
+            <h2 class="titulo-secao">Contato</h2>
+          </div>
+
+          <div class="grade-contato">
+
+            <div class="bloco-conteudo">
+              <h3 class="titulo-item">
+                <i class="fa-solid fa-briefcase"></i> Por que me contratar?
+              </h3>
+
+              <div class="caixa-destaque-contratar">
+                <p class="texto-destaque-contratar">
+                  Sou dedicada e dou o meu melhor em tudo o que faço, sempre com atenção aos detalhes. Me comunico bem,
+                  gosto de trabalhar em equipe e estou sempre aprendendo, porque acredito que conhecimento contínuo faz
+                  a diferença. Quando assumo uma tarefa, faço com cuidado e capricho até o fim.
+                </p>
+                <span class="autor-destaque-contratar">
+              </div>
+
+              <p class="texto-corrido">
+                Estou disponível para vagas de estágio, projetos colaborativos e novos
+                desafios em tecnologia.
+              </p>
+            </div>
+
+            <div class="bloco-conteudo">
+              <h3 class="titulo-item">
+                <i class="fa-solid fa-address-card"></i> Canais e Currículo
+              </h3>
+
+              <div class="lista-contatos">
+
+                <a href="https://lattes.cnpq.br/3545378770887572" class="botao-acao botao-primario" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-solid fa-file-lines"></i> Ver Currículo Lattes
+                </a>
+
+                <a href="mailto:chimialine@gmail.com" class="botao-acao botao-secundario">
+                  <i class="fa-solid fa-envelope"></i> chimialine@gmail.com
+                </a>
+
+                <a href="https://instagram.com/al_lov3r" class="botao-acao botao-secundario" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-brands fa-instagram"></i> @al_lov3r
+                </a>
+
+                <a href="https://github.com/chimialine-web" class="botao-acao botao-secundario" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i> github.com/chimialine-web
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bloco-aprofundar">
+            <div class="texto-aprofundar">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Prefere uma página dedicada com todas as formas de contato e mensagem direta?</span>
+            </div>
+            <a href="contato.html" class="botao-acao botao-secundario">
+              <i class="fa-solid fa-arrow-right"></i> Ver página: Contato
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape-site rodape">
+    <div class="conteiner rodape-conteudo">
+      <p class="texto-rodape">
+        Feito por ˚Aline⋆˚꩜｡ com HTML, CSS e JavaScript - Centro Universitário Integrado
+      </p>
+      <h6 class="texto-rodape" id="rodapeHora">
+        Feito com HTML, CSS e JavaScript
+      </h6>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

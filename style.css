@@ -1,0 +1,1287 @@
+/* ==========================================================================
+   PORTFÓLIO PESSOAL - ALINE (DESENVOLVEDORA FULL STACK)
+   Estilo: Frutiger Aero imerso em Noite Digital (Weirdcore)
+   ========================================================================== */
+
+/* ================= 1. VARIÁVEIS E CONFIGURAÇÃO GERAL ================= */
+:root {
+  /* Cores principais pedidas: azul, verde, verde-água e ciano */
+  --cor-azul: #005bb5;
+  --cor-verde: #059669;
+  --cor-verde-agua: #00a88f;
+  --cor-ciano: #00b4d8;
+
+  /* Cores de fundo, texto e vidro para o Modo Claro */
+  --cor-fundo: #dff1fc;
+  --cor-fundo-gradiente: linear-gradient(180deg, #bfe4fa 0%, #e8f7ff 50%, #d4eefc 100%);
+  --cor-texto-principal: #0a2540;
+  --cor-texto-secundario: #2c4b68;
+
+  /* Efeito de vidro fosco translúcido */
+  --cor-vidro: rgba(255, 255, 255, 0.58);
+  --cor-vidro-interno: rgba(255, 255, 255, 0.72);
+  --cor-borda-vidro: rgba(255, 255, 255, 0.85);
+  --sombra-vidro: 0 12px 30px rgba(0, 91, 181, 0.15);
+
+  /* Botões e destaques */
+  --cor-botao-fundo: linear-gradient(180deg, #00c4e6 0%, #0077b6 100%);
+  --cor-botao-texto: #ffffff;
+  --cor-botao-borda: #0096c7;
+
+  /* Fontes do Google Fonts */
+  --fonte-titulos: 'Syne', sans-serif;
+  --fonte-texto: 'Plus Jakarta Sans', sans-serif;
+
+  /* Filtro da imagem de fundo */
+  --filtro-fundo: brightness(1) contrast(1);
+}
+
+/* Sobrescrita de variáveis para o Modo Escuro (Noite Digital / Weirdcore) */
+body.modo-escuro,
+html.modo-escuro body {
+  /* Cores principais adaptadas para contraste noturno */
+  --cor-azul: #4cc9f0;
+  --cor-verde: #10b981;
+  --cor-verde-agua: #2dd4bf;
+  --cor-ciano: #72efdd;
+
+  /* Fundos escuros e misteriosos com bom contraste de texto */
+  --cor-fundo: #090614;
+  --cor-fundo-gradiente: linear-gradient(180deg, #0c081e 0%, #150f2e 50%, #090614 100%);
+  --cor-texto-principal: #f0f7ff;
+  --cor-texto-secundario: #bfd3e6;
+
+  /* Vidro fosco escuro translúcido */
+  --cor-vidro: rgba(18, 14, 38, 0.78);
+  --cor-vidro-interno: rgba(28, 20, 56, 0.82);
+  --cor-borda-vidro: rgba(76, 201, 240, 0.35);
+  --sombra-vidro: 0 12px 32px rgba(0, 0, 0, 0.6);
+
+  /* Botões no modo escuro */
+  --cor-botao-fundo: linear-gradient(180deg, #00a88f 0%, #005bb5 100%);
+  --cor-botao-texto: #ffffff;
+  --cor-botao-borda: #4cc9f0;
+
+  /* Filtro de noite digital surreal para o fundo */
+  --filtro-fundo: invert(0.9) hue-rotate(190deg) contrast(140%) brightness(0.65);
+}
+
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto-principal);
+  background-color: var(--cor-fundo);
+  background-image: var(--cor-fundo-gradiente);
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Estrutura centralizada com muito espaço em branco */
+.conteiner {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Painel de vidro fosco com blur (sem uso de table ou blockquote) */
+.painel-vidro {
+  background: var(--cor-vidro);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid var(--cor-borda-vidro);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: var(--sombra-vidro);
+  margin-bottom: 60px;
+}
+
+/* ================= 2. FUNDO, BOLHAS E ELEMENTOS DECORATIVOS ================= */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('img/fundo-aero.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  filter: var(--filtro-fundo);
+  z-index: -3;
+  opacity: 0.85;
+}
+
+/* Bolhas translúcidas no banner Frutiger Aero */
+.conteiner-bolhas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bolha-1 {
+  width: 70px;
+  height: 70px;
+  left: 10%;
+  top: 20%;
+}
+
+.bolha-2 {
+  width: 110px;
+  height: 110px;
+  right: 15%;
+  top: 15%;
+}
+
+.bolha-3 {
+  width: 50px;
+  height: 50px;
+  left: 30%;
+  bottom: 25%;
+}
+
+.bolha-4 {
+  width: 90px;
+  height: 90px;
+  right: 28%;
+  bottom: 20%;
+}
+
+/* Imagens decorativas passeando lentamente pela tela */
+.camada-flutuante {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.forma-passeando {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--cor-ciano);
+  opacity: 0.3;
+}
+
+.forma-1 {
+  width: 140px;
+  height: 140px;
+  left: 5%;
+  top: 40%;
+}
+
+.forma-2 {
+  width: 180px;
+  height: 180px;
+  right: 6%;
+  top: 60%;
+}
+
+/* ================= 3. CURSOR PERSONALIZADO E RASTRO DE BOLHAS ================= */
+.cursor-personalizado {
+  width: 10px;
+  height: 10px;
+  background-color: var(--cor-ciano);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-rastro {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--cor-verde-agua);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+/* Contêiner de tela cheia para as bolhas que seguem o mouse */
+.conteiner-rastro-bolhas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9995;
+  overflow: hidden;
+}
+
+/* Bolhas translúcidas Frutiger Aero com reflexo e tamanhos dinâmicos */
+.bolha-cursor {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, 0.88) 0%, rgba(215, 246, 255, 0.45) 45%, rgba(0, 180, 216, 0.22) 80%, rgba(255, 255, 255, 0.55) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8), inset 0 -2px 5px rgba(0, 180, 216, 0.3), 0 4px 10px rgba(0, 150, 210, 0.22);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  animation: flutuarEstourarBolha var(--duracao, 850ms) cubic-bezier(0.2, 0.7, 0.4, 1) forwards;
+}
+
+/* Ponto de luz especular interno da bolha d'água */
+.bolha-cursor::after {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 20%;
+  width: 26%;
+  height: 26%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  filter: blur(0.3px);
+}
+
+/* Variação luminescente no Modo Escuro (Weirdcore) */
+body.modo-escuro .bolha-cursor {
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, 0.9) 0%, rgba(114, 239, 221, 0.45) 45%, rgba(76, 201, 240, 0.25) 80%, rgba(16, 185, 129, 0.35) 100%);
+  border: 1px solid rgba(114, 239, 221, 0.85);
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -2px 6px rgba(114, 239, 221, 0.5), 0 0 10px rgba(114, 239, 221, 0.45);
+}
+
+@keyframes flutuarEstourarBolha {
+  0% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) translate(0, 0) scale(0.35);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translate(var(--desloc-x, 0px), -10px) scale(1);
+  }
+
+  75% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) translate(calc(var(--desloc-x, 0px) * 1.4), -26px) scale(1.04);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate(calc(var(--desloc-x, 0px) * 1.8), -44px) scale(1.18);
+  }
+}
+
+/* ================= 4. MENU DE NAVEGAÇÃO FIXO ================= */
+.navegacao-fixa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: var(--cor-vidro);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--cor-borda-vidro);
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.menu-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo-site {
+  font-family: var(--fonte-titulos);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--cor-texto-principal);
+}
+
+.logo-destaque {
+  color: var(--cor-ciano);
+}
+
+.links-navegacao {
+  display: flex;
+  gap: 24px;
+}
+
+.link-menu {
+  text-decoration: none;
+  color: var(--cor-texto-secundario);
+  font-size: 0.95rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.link-menu.ativo {
+  color: var(--cor-ciano);
+  border-bottom: 2px solid var(--cor-ciano);
+}
+
+.controles-topo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.botao-controle {
+  background: var(--cor-vidro-interno);
+  border: 1px solid var(--cor-borda-vidro);
+  color: var(--cor-texto-principal);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--fonte-texto);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Botão hambúrguer para dispositivos móveis */
+.botao-hamburguer {
+  display: none;
+  font-size: 1.05rem;
+  padding: 8px 12px;
+}
+
+/* ================= 5. SEÇÃO INÍCIO (BANNER E APRESENTAÇÃO) ================= */
+.secao-inicio {
+  padding-top: 100px;
+  padding-bottom: 28px;
+  position: relative;
+}
+
+/* Painel inicial mais compacto e elegante */
+.painel-inicio {
+  position: relative;
+  z-index: 2;
+  padding: 26px 32px;
+  margin-bottom: 40px;
+}
+
+/* Linha superior com tag do sistema e olhos observadores */
+.topo-painel-inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.tag-sistema {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: var(--cor-vidro-interno);
+  border: 1px solid var(--cor-borda-vidro);
+  border-radius: 50px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--cor-ciano);
+  margin-bottom: 0;
+}
+
+.ponto-status {
+  width: 7px;
+  height: 7px;
+  background-color: var(--cor-verde);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--cor-verde);
+}
+
+/* Olhos observadores que seguem o cursor (ativos e visíveis no modo escuro) */
+.olhos-observadores {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(-4px) scale(0.92);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.modo-escuro .olhos-observadores {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.olho {
+  position: relative;
+  width: 44px;
+  height: 28px;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #e1f3fe 65%, #a4d3ec 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: 2px solid var(--cor-ciano);
+  box-shadow: 0 0 10px rgba(114, 239, 221, 0.45), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+body.modo-escuro .olho:hover {
+  box-shadow: 0 0 16px rgba(114, 239, 221, 0.85), inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.esclera {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pupila {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: radial-gradient(circle at 40% 40%, #0d1b2a 0%, #000814 85%);
+  border-radius: 50%;
+  border: 2px solid var(--cor-verde-agua);
+  box-shadow: 0 0 6px var(--cor-ciano);
+  transform: translate(0px, 0px);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.brilho-pupila {
+  position: absolute;
+  width: 3.5px;
+  height: 3.5px;
+  top: 2px;
+  left: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 3px #ffffff;
+}
+
+/* Efeito sutil de piscar */
+.olho.piscando {
+  animation: piscarOlho 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes piscarOlho {
+  0% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0.08);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Tipografia compactada do painel inicial */
+.subtitulo-apresentacao {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cor-verde-agua);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.titulo-principal {
+  font-family: var(--fonte-titulos);
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--cor-texto-principal);
+  margin-bottom: 20px;
+}
+
+.grade-apresentacao {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.espaco-foto {
+  flex-shrink: 0;
+}
+
+.FotoIndex {
+  position: relative;
+  display: inline-block;
+}
+
+.FotoIndex img {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cor-ciano);
+  box-shadow: 0 0 18px rgba(0, 180, 216, 0.4);
+  display: block;
+}
+
+.FotoIndex.foto-grande img {
+  width: 160px;
+  height: 160px;
+}
+
+.moldura-foto {
+  display: none;
+}
+
+.texto-apresentacao {
+  flex: 1;
+}
+
+.paragrafo-destaque {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 18px;
+}
+
+.grupo-botoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.painel-inicio .botao-acao {
+  font-size: 0.88rem;
+  padding: 10px 20px;
+}
+
+.botao-acao {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+.botao-primario {
+  background: var(--cor-botao-fundo);
+  color: var(--cor-botao-texto);
+  border: 1px solid var(--cor-botao-borda);
+}
+
+.botao-secundario {
+  background: var(--cor-vidro-interno);
+  color: var(--cor-texto-principal);
+  border: 1px solid var(--cor-borda-vidro);
+}
+
+/* ================= 6. SEÇÃO SOBRE MIM ================= */
+.secao-sobre {
+  padding-bottom: 20px;
+}
+
+.cabecalho-secao {
+  margin-bottom: 30px;
+}
+
+.subtitulo-secao {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cor-verde-agua);
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.titulo-secao {
+  font-family: var(--fonte-titulos);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-texto-principal);
+}
+
+.grade-sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.bloco-conteudo {
+  background: var(--cor-vidro-interno);
+  border: 1px solid var(--cor-borda-vidro);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.titulo-item {
+  font-family: var(--fonte-titulos);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cor-azul);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.texto-corrido {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 14px;
+}
+
+/* ================= 7. SEÇÃO TRAJETÓRIA E CRIAÇÕES ================= */
+.secao-trajetoria {
+  padding-bottom: 20px;
+}
+
+.subbloco-trajetoria {
+  margin-bottom: 36px;
+}
+
+.titulo-subbloco {
+  font-family: var(--fonte-titulos);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cor-verde);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grade-cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.cartao-projeto {
+  background: var(--cor-vidro-interno);
+  border: 1px solid var(--cor-borda-vidro);
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-cartao {
+  font-family: var(--fonte-titulos);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-texto-principal);
+  margin-bottom: 10px;
+}
+
+.descricao-cartao {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.rodape-cartao {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.link-acao {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-azul);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.grade-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.bloco-trajetoria-item {
+  background: var(--cor-vidro-interno);
+  border: 1px solid var(--cor-borda-vidro);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.item-lista {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--cor-borda-vidro);
+}
+
+.item-lista:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ================= 8. SEÇÃO CONTATO ================= */
+.secao-contato {
+  padding-bottom: 40px;
+}
+
+.grade-contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.lista-contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ================= BLOCOS COMPLEMENTARES E PÁGINAS DEDICADAS ================= */
+
+/* Card de chamada para aprofundar nas páginas detalhadas */
+.bloco-aprofundar {
+  margin-top: 26px;
+  padding: 20px 24px;
+  background: var(--cor-vidro-interno);
+  border: 1px dashed var(--cor-ciano);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.texto-aprofundar {
+  font-size: 0.95rem;
+  color: var(--cor-texto-principal);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.texto-aprofundar strong {
+  color: var(--cor-azul);
+}
+
+body.modo-escuro .texto-aprofundar strong {
+  color: var(--cor-ciano);
+}
+
+/* Migalha de pão (Breadcrumb) para páginas internas */
+.migalha-pao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 12px;
+}
+
+.migalha-pao a {
+  color: var(--cor-ciano);
+  text-decoration: none;
+}
+
+/* Caixa em destaque para o texto 'Por que me contratar' */
+.caixa-destaque-contratar {
+  background: radial-gradient(circle at 10% 20%, rgba(0, 180, 216, 0.12) 0%, rgba(0, 168, 143, 0.08) 100%), var(--cor-vidro-interno);
+  border: 2px solid var(--cor-verde-agua);
+  border-radius: 16px;
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(0, 168, 143, 0.1);
+}
+
+.texto-destaque-contratar {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--cor-texto-principal);
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.autor-destaque-contratar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cor-verde);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+/* Tags e Pills para habilidades e interesses */
+.lista-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: var(--cor-vidro);
+  border: 1px solid var(--cor-borda-vidro);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-texto-principal);
+}
+
+.tag-pill i {
+  color: var(--cor-verde-agua);
+}
+
+/* Aviso e nota sobre inspirações vs autoria */
+.bloco-aviso-inspiracao {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: var(--cor-vidro);
+  border-left: 4px solid var(--cor-ciano);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.5;
+}
+
+.bloco-aviso-inspiracao strong {
+  color: var(--cor-texto-principal);
+}
+
+/* Grade de botões e cartões de contato na página dedicada */
+.grade-botoes-contato {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.cartao-contato-link {
+  background: var(--cor-vidro-interno);
+  border: 1px solid var(--cor-borda-vidro);
+  border-radius: 14px;
+  padding: 22px;
+  text-decoration: none;
+  color: var(--cor-texto-principal);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icone-contato-grande {
+  font-size: 2rem;
+  color: var(--cor-ciano);
+}
+
+.rotulo-contato {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  font-weight: 700;
+  color: var(--cor-verde-agua);
+}
+
+.dado-contato {
+  font-size: 0.95rem;
+  font-weight: 700;
+  word-break: break-all;
+  color: var(--cor-texto-principal);
+}
+
+.acao-contato {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-azul);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+body.modo-escuro .acao-contato {
+  color: var(--cor-ciano);
+}
+
+/* Formulário de mensagem rápida */
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-texto-principal);
+}
+
+.campo-form input,
+.campo-form textarea,
+.campo-form select {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--cor-vidro);
+  border: 1px solid var(--cor-borda-vidro);
+  border-radius: 10px;
+  color: var(--cor-texto-principal);
+  font-family: var(--fonte-texto);
+  font-size: 0.95rem;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.campo-form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2300b4d8' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.campo-form select option {
+  background: var(--cor-fundo);
+  color: var(--cor-texto-principal);
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus,
+.campo-form select:focus {
+  border-color: var(--cor-ciano);
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.35);
+}
+
+/* Aviso de validação do formulário */
+.aviso-formulario {
+  font-size: 0.88rem;
+  font-weight: 600;
+  min-height: 1.2em;
+  border-radius: 8px;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.aviso-formulario.erro {
+  color: #f87171;
+}
+
+.aviso-formulario.sucesso {
+  color: var(--cor-verde);
+}
+
+/* ================= 9. RODAPÉ DO SITE ================= */
+.rodape-site {
+  background: var(--cor-vidro);
+  border-top: 1px solid var(--cor-borda-vidro);
+  padding: 28px 0;
+  text-align: center;
+}
+
+.texto-rodape {
+  font-size: 0.85rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 6px;
+}
+
+.rodape h6 {
+  font-family: var(--fonte-texto);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 6px;
+}
+
+/* ================= 10. RESPONSIVIDADE (UMA MEDIA QUERY POR SEÇÃO) ================= */
+@media (max-width: 768px) {
+
+  /* Menu e Botão Hambúrguer */
+  .botao-hamburguer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .links-navegacao {
+    display: none;
+  }
+
+  .links-navegacao.menu-aberto {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--cor-vidro);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--cor-borda-vidro);
+    box-shadow: var(--sombra-vidro);
+    padding: 16px 24px 22px;
+    gap: 10px;
+    z-index: 999;
+    animation: animarMenuMobile 0.22s ease-out forwards;
+  }
+
+  .links-navegacao.menu-aberto .link-menu {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.98rem;
+    border-radius: 8px;
+    background: var(--cor-vidro-interno);
+    border: 1px solid var(--cor-borda-vidro);
+    display: block;
+  }
+
+  /* Início */
+  .topo-painel-inicio {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grade-apresentacao {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grupo-botoes {
+    justify-content: center;
+  }
+
+  .titulo-principal {
+    font-size: 1.55rem;
+  }
+
+  /* Sobre mim */
+  .grade-sobre {
+    grid-template-columns: 1fr;
+  }
+
+  /* Trajetória */
+  .grade-cartoes {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-dupla {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contato */
+  .grade-contato {
+    grid-template-columns: 1fr;
+  }
+
+  /* Painéis gerais */
+  .painel-vidro {
+    padding: 24px;
+  }
+}
+
+/* Animação suave para abertura do menu mobile */
+@keyframes animarMenuMobile {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes finos para celulares com largura reduzida */
+@media (max-width: 480px) {
+  .menu-conteudo {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .logo-site {
+    font-size: 1.15rem;
+  }
+
+  .controles-topo {
+    gap: 6px;
+  }
+
+  .botao-controle {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+
+  #textoMusica,
+  #textoTema {
+    display: none;
+  }
+}
+
+/* ================= 11. BLOCO EXCLUSIVO: HOVER E TRANSIÇÕES =================
+   Todos os efeitos de transição e interação de hover estão reunidos abaixo,
+   conforme exigido pelas regras do projeto.
+============================================================================= */
+
+/* Transições gerais suaves */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body::before {
+  transition: filter 0.5s ease;
+}
+
+.link-menu {
+  transition: color 0.2s ease;
+}
+
+.botao-controle {
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao-acao {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.cartao-projeto {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.cartao-contato-link {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tag-pill {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.bloco-aprofundar {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.link-acao {
+  transition: color 0.2s ease;
+}
+
+/* Efeitos de Hover discretos */
+.link-menu:hover {
+  color: var(--cor-ciano);
+}
+
+.botao-controle:hover {
+  border-color: var(--cor-ciano);
+  transform: translateY(-2px);
+}
+
+.botao-acao:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.cartao-projeto:hover {
+  transform: translateY(-4px);
+  border-color: var(--cor-ciano);
+}
+
+.cartao-contato-link:hover {
+  transform: translateY(-4px);
+  border-color: var(--cor-ciano);
+  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.2);
+}
+
+.tag-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--cor-ciano);
+}
+
+.bloco-aprofundar:hover {
+  border-color: var(--cor-verde-agua);
+  box-shadow: 0 4px 18px rgba(0, 168, 143, 0.15);
+}
+
+.link-acao:hover {
+  color: var(--cor-verde-agua);
+}
+
+.links-navegacao.menu-aberto .link-menu:hover {
+  border-color: var(--cor-ciano);
+  transform: translateX(4px);
+}
+
+.descricao-projeto {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.titulo-funcionalidades {
+  font-size: 1.05rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.descricao-projeto strong {
+  font-weight: 700;
+}
+
+/*FOTO ~ BLOCO 2: TRAJETORIA*/
+.moldura-imagem {
+  width: 100%;
+}
+
+.moldura-imagem img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+}

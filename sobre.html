@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página Sobre Mim de Aline Chiminácio da Silva: bio completa, quem sou eu, meus interesses, astronomia, arte, esportes e formação em desenvolvimento Full Stack.">
+    <title>Sobre Mim | Aline Chiminácio da Silva</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor-personalizado" id="cursorPonto"></div>
+    <div class="cursor-rastro" id="cursorRastro"></div>
+    <div class="conteiner-rastro-bolhas" id="conteinerRastroBolhas"></div>
+    <div class="camada-flutuante">
+        <div class="forma-passeando forma-1"></div>
+        <div class="forma-passeando forma-2"></div>
+    </div>
+
+    <nav class="navegacao-fixa">
+        <div class="conteiner menu-conteudo">
+            <a href="index.html#inicio" class="logo-site">
+                <span class="logo-destaque">Aline</span> Chimi
+            </a>
+
+            <div class="links-navegacao" id="linksNavegacao">
+                <a href="index.html#inicio" class="link-menu">Início</a>
+                <a href="sobre.html" class="link-menu ativo">Sobre mim</a>
+                <a href="trajetoria.html" class="link-menu">Trajetória e Criações</a>
+                <a href="contato.html" class="link-menu">Contato</a>
+            </div>
+
+            <div class="controles-topo">
+                <button id="botaoMusica" class="botao-controle" type="button" aria-label="Tocar ou pausar música">
+                    <span id="textoMusica">▶─•</span>
+                </button>
+
+                <button id="botaoTema" class="botao-controle botao-tema" type="button"
+                    aria-label="Alternar modo claro e escuro">
+                    <span id="textoTema">🫧</span>
+                </button>
+
+                <button id="botaoMenuMobile" class="botao-controle botao-hamburguer" type="button"
+                    aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="linksNavegacao">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <audio id="audioFundo" preload="none">
+        <source src="Audio/Audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <main>
+
+        <header class="secao-inicio">
+            <div class="conteiner-bolhas">
+                <div class="bolha bolha-1"></div>
+                <div class="bolha bolha-2"></div>
+                <div class="bolha bolha-3"></div>
+                <div class="bolha bolha-4"></div>
+            </div>
+
+            <div class="conteiner">
+                <div class="painel-vidro painel-inicio">
+
+                    <div class="topo-painel-inicio">
+                        <div class="tag-sistema">
+                            <span class="ponto-status"></span>
+                            <span id="rotuloSistema">Sistema: Frutiger Aero // Dia Ativo</span>
+                        </div>
+
+                        <!-- Olhos interativos -->
+                        <div class="olhos-observadores" id="olhosObservadores" aria-hidden="true"
+                            title="Olhos observando seus movimentos">
+                            <div class="olho" id="olhoEsquerdo">
+                                <div class="esclera">
+                                    <div class="pupila">
+                                        <div class="brilho-pupila"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="olho" id="olhoDireito">
+                                <div class="esclera">
+                                    <div class="pupila">
+                                        <div class="brilho-pupila"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="migalha-pao">
+                        <a href="index.html#inicio"><i class="fa-solid fa-house"></i> Início</a>
+                        <span>/</span>
+                        <span>Sobre mim</span>
+                    </div>
+
+                    <p class="subtitulo-apresentacao">Aline Chiminácio da Silva — Conheça meu perfil</p>
+                    <h1 class="titulo-principal">
+                        Quem sou eu, minha visão e tudo o que me move.
+                    </h1>
+
+                    <div class="grade-apresentacao">
+                        <div class="espaco-foto">
+                            <div class="FotoIndex foto-grande">
+                                <img src="img/lili.jpeg" alt="Foto de perfil de Aline Chiminácio da Silva">
+                            </div>
+                        </div>
+
+                        <div class="texto-apresentacao">
+                            <p class="paragrafo-destaque">
+                                Sou uma desenvolvedora Full Stack em formação que enxerga o código como uma ponte entre
+                                a lógica matemática e a expressão artística. Valorizo cada detalhe, busco excelência no
+                                que executo e acredito que a curiosidade contínua é o motor para construir soluções
+                                digitais que realmente impactam pessoas.
+                            </p>
+
+                            <div class="grupo-botoes">
+                                <a href="trajetoria.html" class="botao-acao botao-primario">
+                                    <i class="fa-solid fa-folder-open"></i> Ver Minha Trajetória
+                                </a>
+                                <a href="contato.html" class="botao-acao botao-secundario">
+                                    <i class="fa-solid fa-paper-plane"></i> Entrar em Contato
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Bio Completa e Quem Sou Eu -->
+        <section class="secao-sobre">
+            <div class="conteiner">
+                <div class="painel-vidro">
+
+                    <div class="cabecalho-secao">
+                        <span class="subtitulo-secao">Minha História & Propósito</span>
+                        <h2 class="titulo-secao">Quem sou eu</h2>
+                    </div>
+
+                    <div class="grade-sobre">
+                        <div class="bloco-conteudo">
+                            <h3 class="titulo-item">
+                                <i class="fa-solid fa-user-astronaut"> Bio Completa</i>
+                            </h3>
+                            <p class="texto-corrido">
+                                Meu nome é <strong>Aline Chiminácio da Silva</strong>.
+                                Desde o início dos meus estudos em programação, compreendi
+                                que desenvolver para a web é muito mais do que escrever linhas de instrução: é criar
+                                atmosferas, facilitar a vida das pessoas e construir experiências fluidas e memoráveis.
+                            </p>
+                            <p class="texto-corrido">
+                                Sou extremamente dedicada e entrego o meu melhor em cada desafio. Prezo pela
+                                organização, boa documentação, estética do site, acessibilidade, respeito aos padrões
+                                web. No trabalho em
+                                equipe, prezo pela escuta ativa, diálogo aberto e espírito de colaboração mútua.
+                            </p>
+                        </div>
+
+                        <div class="bloco-conteudo">
+                            <h3 class="titulo-item">
+                                <i class="fa-solid fa-compass-drafting"> Postura & Valores</i>
+                            </h3>
+                            <p class="texto-corrido">
+                                <strong>Atenção aos Detalhes:</strong> Nada passa despercebido — desde o alinhamento
+                                visual de um botão até a clareza da lógica interna do sistema.
+                            </p>
+                            <p class="texto-corrido">
+                                <strong>Aprendizado Contínuo:</strong> Acredito que o conhecimento nunca para. Abraço
+                                novidades técnicas com entusiasmo e curiosidade, sempre buscando inovar e melhorar!
+                            </p>
+                            <p class="texto-corrido">
+                                <strong>Capricho até o Fim:</strong> Quando assumo um compromisso ou tarefa, levo-o até
+                                o final com esmero e alto padrão de qualidade.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- O que mais gosto e Interesses no Geral -->
+        <section class="secao-trajetoria">
+            <div class="conteiner">
+                <div class="painel-vidro">
+
+                    <div class="cabecalho-secao">
+                        <span class="subtitulo-secao">Minhas paixões e vivências</span>
+                        <h2 class="titulo-secao">O que mais gosto e meus interesses</h2>
+                    </div>
+
+                    <div class="grade-cartoes">
+
+                        <!-- Interesse 1: Astronomia -->
+                        <article class="cartao-projeto">
+                            <h3 class="titulo-cartao">
+                                <i class="fa-solid fa-satellite" style="color: var(--cor-ciano);"> Astronomia</i>
+                            </h3>
+                            <p class="descricao-cartao">
+                                Sempre fui fascinada pela imensidão do espaço e pelos mistérios do universo. Realizei o
+                                curso de astronomia na UTFPR, onde aprofundei minha admiração pela observação celeste,
+                                método científico e pensamento analítico.
+                            </p>
+                        </article>
+
+                        <!-- Interesse 2: Ilustração e Desenho -->
+                        <article class="cartao-projeto">
+                            <h3 class="titulo-cartao">
+                                <i class="fa-solid fa-pen-nib" style="color: var(--cor-verde-agua);">Ilustração &
+                                    Desenho</i>
+                            </h3>
+                            <p class="descricao-cartao">
+                                O desenho é uma das minhas grandes paixões. Adoro criar ilustrações manuais e digitais,
+                                explorando linhas expressivas, proporções, personagens e composições visuais com
+                                sensibilidade.
+                            </p>
+                        </article>
+
+                        <!-- Interesse 3: Colagens & Canva -->
+                        <article class="cartao-projeto">
+                            <h3 class="titulo-cartao">
+                                <i class="fa-solid fa-shapes" style="color: var(--cor-azul);">Colagens & Canva</i>
+                            </h3>
+                            <p class="descricao-cartao">
+                                Gosto de experimentar composições visuais, recortar referências e criar artes digitais
+                                no Canva. Esse hobby alimenta minha criatividade para montar identidades visuais
+                                originais.
+                            </p>
+                        </article>
+
+                        <!-- Interesse 4: Esportes e Movimento -->
+                        <article class="cartao-projeto">
+                            <h3 class="titulo-cartao">
+                                <i class="fa-solid fa-person-running" style="color: var(--cor-verde);"> Esportes &
+                                    Atividades</i>
+                            </h3>
+                            <p class="descricao-cartao">
+                                A prática esportiva faz parte essencial da minha rotina. Praticar esportes me traz
+                                disciplina, alívio de estresse, clareza mental e a energia necessária para manter a
+                                concentração nos estudos.
+                            </p>
+                        </article>
+
+                        <!-- Interesse 5: Desenvolvimento & Código -->
+                        <article class="cartao-projeto">
+                            <h3 class="titulo-cartao">
+                                <i class="fa-solid fa-code" style="color: var(--cor-ciano);"> Desenvolvimento Web</i>
+                            </h3>
+                            <p class="descricao-cartao">
+                                Adoro a sensação de transformar uma ideia em uma interface interativa viva. Programar me
+                                desafia a resolver problemas e a buscar soluções elegantes.
+                            </p>
+                        </article>
+
+                        <!-- Interesse 6: Estéticas Visuais -->
+                        <article class="cartao-projeto">
+                            <h3 class="titulo-cartao">
+                                <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--cor-verde-agua);">
+                                    Frutiger Aero & Weirdcore</i>
+                            </h3>
+                            <p class="descricao-cartao">
+                                Sou apaixonada pela estética Frutiger Aero dos anos 2000 — com suas águas cristalinas,
+                                vidros foscos e céu azul utópico — em contraste com o mistério digital da estética
+                                Weirdcore.
+                            </p>
+                        </article>
+
+                    </div>
+
+                    <!-- Navegação complementar -->
+                    <div class="bloco-aprofundar">
+                        <div class="texto-aprofundar">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>Veja em detalhes meus projetos executados, formação e produções visuais:</span>
+                        </div>
+                        <a href="trajetoria.html" class="botao-acao botao-secundario">
+                            <i class="fa-solid fa-arrow-right">Ver Trajetória e Criações</i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape-site rodape">
+        <div class="conteiner rodape-conteudo">
+            <p class="texto-rodape">
+                Feito por ˚Aline⋆˚꩜｡ com HTML, CSS e JavaScript - Centro Universitário Integrado
+            </p>
+            <h6 class="texto-rodape" id="rodapeHora">
+                Feito com HTML, CSS e JavaScript
+            </h6>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
